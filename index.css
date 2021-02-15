@@ -1,0 +1,103 @@
+.brand-logo img {
+  border-radius: 20rem !important;
+}
+* {
+  font-family: "Rubik", sans-serif;
+}
+body {
+  scroll-behavior: smooth !important;
+}
+.btn-large {
+  border-radius: 4rem !important;
+  background-color: rgb(0, 17, 255) !important ;
+  margin-top: 1rem !important;
+  margin-left: 45% !important;
+}
+
+.btn2 {
+  background-color: transparent !important;
+  border: 0px !important;
+}
+
+.dropdown-content li > a {
+  color: white;
+  background-color: blue;
+}
+
+nav ul a:hover {
+  background-color: rgb(0, 6, 83);
+}
+
+.btn-large:hover {
+  transform: scale(1.1);
+  color: white !important;
+  background-color: rgb(0, 6, 83) !important;
+}
+nav {
+  background-color: transparent !important;
+  border-bottom: transparent !important;
+}
+.login-btn:hover {
+  color: rgb(158, 158, 158) !important;
+}
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("BACKGROUND.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.nav-wrapper {
+  border-bottom: transparent solid 2px !important;
+}
+
+.aboutus {
+  font-size: 1.45rem !important;
+}
+
+.aboutus2 {
+  font-size: 1.45rem !important;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .aboutus,
+  .aboutus2 {
+    font-size: 0.86rem !important;
+    margin-left: 3rem !important;
+  }
+
+  .services {
+    margin-bottom: 9rem !important;
+  }
+  .services2 {
+    margin-top: 10rem !important;
+  }
+
+  .italian {
+    font-size: 1rem !important;
+  }
+
+  .aboutus2italian {
+    font-size: 0.8rem !important;
+  }
+
+  .aboutusromania {
+    font-size: 0.76rem !important;
+  }
+
+  .romania {
+    font-size: 1.55rem !important;
+  }
+
+  .capetanos {
+    font-size: 0.66rem !important;
+  }
+
+  .gaspard {
+    margin-right: 5rem !important;
+  }
+}

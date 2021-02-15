@@ -1,0 +1,216 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "programmingshortcuts@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    // You cannot use header and echo together. It's one or the other.
+    }
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+
+  <title>Programming Shortcuts</title>
+</head>
+<body>
+  
+  
+
+<div class="col s12 header z-depth-0" style="height: 40rem !important;">
+  <nav class="transparent z-depth-0" ">
+    <div class="nav-wrapper white-text">
+      <a href="#" class="brand-logo" style="padding-top: 0.5rem !important;"><img src="shortcut.png" width="60" height="60" alt="" srcset="" style="margin-left: 0.5rem !important;" > </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down" >
+        <li><a class="login-btn" href="#about">Chi siamo</a></li>
+        <li><a class="login-btn"href="#services">Servizi</a></li>
+        <li><a class="login-btn"href="#contact">Contatto</a></li>
+        <a class='dropdown-trigger btn btn2' href='#' data-target='dropdown1'>Lingua</a> <ul id='dropdown1' class='dropdown-content'>
+          <li><a href="#!">Esci</a></li>
+          <li class="divider" tabindex="-1"></li>
+          <li><a href="index.html">Inglese</a></li>
+          <li><a href="romanian.html">Rumeno</a></li>
+        </ul>
+        
+      </ul>
+    </div>
+
+    <ul id="slide-out" class="sidenav">
+      <li><div class="user-view">
+        <div class="background">
+      </div></li>
+      <li><div class="divider"></div></li>
+      <li><a class="subheader">Cambia lingua</a></li>
+      <li><a class="waves-effect" href="index.html">Inglese</a></li>
+      <li><a class="waves-effect" href="romanian.html">Rumeno</a></li>
+
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  </nav>
+  <div class="col s12" style="padding-top: 7rem !important">
+    <h3 class="white-text center ">Chi siamo ?</h3>
+    
+    <p class="white-text center"  style="font-size: 1.13rem !important"> 
+  Siamo un' azienda professionale di sviluppo di software specializzata nel trovare e risolvere problemi per ristoranti, bar e pub durante la crisi di COVID-19 </p>
+    <div class="col s12">
+      <div class="col s6"></div>
+      <a href ="#about" class="btn-large waves-effect">Scopri di più</a>
+    </div>
+    
+  </div>
+</div>
+
+<div class="col s12 blue darken-4 white-text about" id="about" style="height: 80vh !important; padding-top: 4rem !important;">
+  <h3 class="center">
+    About us
+  </h3>
+  <div class="row">
+<div class="col s6">
+  <img src="laptoc.png" class="hide-on-med-and-down" style="margin-left: 1rem !important; margin-top: -6.7rem !important;">
+</div>
+<div class="col s6" style="margin-left: -15rem !important;">
+  <p class=" aboutus2 aboutus2italian"> 
+    Siamo una squadra di 5 sviluppatori con sede nel Regno Unito con esperienza dovuta grazie al nostro lavoro in grandi aziende come Google, Uber, Apple e abbiamo deciso di creare un' app che aiuterebbe i ristoranti locali di prosperare senza che il COVID-19 potreste affetarli.
+  </p>
+  <p class="aboutus aboutus2italian"> 
+    Abbiamo più di 115 clienti sodisfatti in tutto il mondo siccome i Codice QR stanno diventando un dovere e per esempio questo è già successo in Australia dove i codici QR sono diventati obbligatori per mantenere in sicurezza un ristorante. Dopo che i nostri clienti hanno comprato il nostro prodotto si sono viste salite di vendita di 35% o di più.  <p>
+<br>
+
+
+</div>
+
+  </div>
+ 
+</div>
+
+<div class="col s12 services " style="height: 70vh !important; padding-top: 2rem !important;" id="services">
+  <h3 class="center">Servizi</h3>
+  <div class="row">
+    <div class="col s12 center" style="padding-top: 5rem !important;">
+      <div class="col s4">
+        <i class="material-icons medium">local_dining</i>
+        <h4 class="italian">Restaurant Menu</h4>
+        <p>Menu con Codice QR per il tuo ristorante</p>
+      </div>
+    
+      <div class="col s4">
+        <i class="material-icons medium">local_bar</i>
+        <h4 class="italian">Pub Menu</h4>
+        <p>Menu con Codice QR per il tuo pub</p>
+      </div>
+      
+      <div class="col s4">
+        <i class="material-icons medium">local_cafe</i>
+        <h4 class="italian">Bar menu</h4> 
+        <p>Menu con Codice QR per il tuo bar</p>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+<div class="col s12"> 
+
+</div>
+
+<div class="col s12 services2 blue darken-4 white-text " id="contact" style="height: 70vh !important; padding-top: 2rem !important;" id="services">
+  <h3 class="center ">Contact</h3>
+  <div class="row">
+    <div class="col s12 center" style="padding-top: 5rem !important;">
+      <div class="col s3"></div>
+      <div class="col s6">
+        <form
+    action="https://formspree.io/f/mnqoypkw"
+    method="POST"
+  >
+    <label class="white-text">
+      Il tuo e-mail:
+      <input type="text" name="_replyto" class="white-text">
+    </label>
+    <label class="white-text">
+      Il tuo messaggio:
+      <textarea class="materialize-textarea white-text" name="message"></textarea>
+    </label>
+
+    <!-- your other form fields go here -->
+    <div class="col s1"><button class="btn-large waves-effect blue darken-2" style="margin-left: -1.5rem !important;" type="submit">Invia</button></div>
+    
+  </form>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+<footer class="page-footer black">
+  <div class="container black">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Contatto</h5>
+        <p class="grey-text ">programmingshortcuts@gmail.com</p>
+        <p class="grey-text ">+44 07456 232 657</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Indirizzo</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" target="_blank">
+            Badminton Rd Trading Estate, Bristol, BS37 5NS 
+          </li>
+          
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    © 2021 Copyright Programming Shortcuts
+    
+    </div>
+  </div>
+</footer>
+    
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="index.js"></script>
+  <script src=”https://www.jdoodle.com/assets/jdoodle-pym.min.js” type=”text/javascript”></script>
+</body>
+</html>
