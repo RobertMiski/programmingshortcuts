@@ -51,27 +51,18 @@ nav {
   border-bottom: transparent solid 2px !important;
 }
 
-.aboutus {
-  font-size: 1.45rem !important;
-}
-
-.aboutus2 {
-  font-size: 1.45rem !important;
-}
-
 * {
   scroll-behavior: smooth;
 }
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (max-width: 600px) {
   .aboutus,
   .aboutus2 {
     font-size: 0.86rem !important;
-    margin-left: 3rem !important;
   }
 
   .services {
-    margin-bottom: 9rem !important;
+    height: 60rem !important;
   }
   .services2 {
     margin-top: 10rem !important;
