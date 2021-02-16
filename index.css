@@ -96,3 +96,11 @@ nav {
     font-size: 1.5rem !important;
   }
 }
+
+#services {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://911cheferic.com/wp-content/uploads/2020/06/QR-code-restaurant-menu.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white !important;
+}
